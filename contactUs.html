@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>אוכל רחוב - צרו קשר</title>
+    <meta name="description" content="האתר הזה נבנה לצורך פרויקט סוף שנה של שנה א' בתואר טכנולוגיות למידה'" />
+    <meta name="keywords" content="מתכונים, אוכל רחוב, אוכל,רחוב,בוריטו,גלידה, צרו קשר" />
+    <meta name="author" content="Omer,Eyal,Raz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- CSS -->
+    <!--<link href="styles/reset.css" rel="stylesheet" />-->
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="files/Whitelogo_update.png">
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-3.6.0.min.js"></script>
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+
+
+</head>
+<body class="background" alt="תמונת רקע של הגשת אוכל רחוב ">
+    <header>
+        <a href="index.html"><div id="logo"></div></a>
+        <nav id="crumbles">
+            <ol>
+                <li><a class="links" href="index.html">דף הבית</a></li>
+                <li class="active">צרו קשר</li>
+            </ol>
+
+        </nav>
+        <nav id="navbar">
+            <ul>
+                <li class="navHover"><a class="links" href="index.html">דף הבית</a></li>
+                <li class="navHover"><a class="links" href="sefer-matkonim.html">ספר מתכונים</a></li>
+                <li class="navHover"><a class="links" href="foodByContinents.html">אוכל לפי יבשות</a></li>
+                <li class="disabled"><a class="links" href=#>ירידי אוכל בעולם</a></li>
+                <li class="navHover"><a class="links" href="about.html">אודות</a></li>
+                <li class="active">צרו קשר</li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h2 id=contactUsTitle>צרו קשר</h2>
+    </div>
+    <div id="homepage">
+        <section id="secondSection-contact">
+            <div id="second-form">
+                <div class="texts-in-second-form">
+                    <h3>יש לכם עוד מתכונים או חוויות שתרצו להוסיף או סתם לומר מילה תודה? דברו איתנו</h3>
+
+                </div>
+                <div id="form">
+                    <form name="contactUs">
+                        <input type="hidden" id="myEmail" name="contactUs" value="omerkrespi.1@gmail.com" />
+                        <label for="firstName" class="form-label">
+                            <span class="form-input-text">שם פרטי<span class="required-field">*</span></span>
+                            <input class="form-input" type="text" id="firstName" required title="הכנס שם פרטי" />
+                        </label>
+                        <label for="lastName" class="form-label">
+                            <span class="form-input-text">שם משפחה<span class="required-field">*</span></span>
+                            <input class="form-input" type="text" id="lastName" required />
+
+                        </label> <br />
+                        <label for="phoneNumber" class="form-label">
+                            <span class="form-input-text">מספר טלפון</span>
+                            <input class="form-input" type="tel" id="phoneNumber" />
+                        </label>
+                        <label for="email" class="form-label">
+                            <span class="form-input-text">אימייל<span class="required-field">*</span></span>
+                            <input class="form-input" type="email" id="email" required />
+
+                        </label>
+                        <br />
+                        <textarea id="message" class="form-label" placeholder="המילים שלך זו המשימה שלנו"></textarea>
+                        <label for="send">
+                            <input type="submit" id="send" value="שלח" />
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <a href="#" class="scroll-up-button" onclick="scrollToTop()">&#8593;</a>
+    <footer class="footer">
+        <nav id="navFooter">
+            <ul>
+                <li class="navHover"><a class="links" href="siteMap.html">מפת אתר</a></li>
+                <li class="navHover"><a class="links" href="about.html">אודות</a></li>
+                <li class="active">צור קשר</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
+
+
+

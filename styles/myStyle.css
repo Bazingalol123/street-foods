@@ -1,0 +1,676 @@
+﻿@font-face {
+    font-family: 'Fredoka';
+    src: url('../Fredoka/Fredoka-VariableFont_wdth,wght.ttf');
+}
+/*הגדרות כלליות של האתר*/
+html {
+    scroll-behavior: smooth;
+    min-width: 1230px;
+    min-height: 650px;
+    overflow: auto;
+}
+/*הגדרות של העמוד*/
+.background {
+    direction: rtl;
+    background-image: url(../files/background_darker.jpg);
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Fredoka;
+}
+
+/*הגדרות כלליות לכל הסלקטורים*/
+* {
+    box-sizing: border-box;
+}
+
+/* הגדרות של הגלילה בצד האתר*/
+/* Webkit (Safari, Chrome) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555555;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #555555 #222222;
+}
+
+/* הגדרות של עמוד foodByContinent */
+#background-map-design {
+    background-image: url('../sitemap.jpeg');
+    background-size: 100%;
+}
+#backgroundMap {
+    direction: rtl;
+    
+    height: 720px;
+    margin: 0;
+    padding: 0;
+    font-family: Fredoka;
+}
+
+#background-map-design {
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    font-family: Fredoka;
+}
+
+/*הגדרות לוגו*/
+#logo {
+    background-image: url(../files/Whitelogo_update.png);
+    margin-right: 40px;
+    height: 95px;
+    width: 120px;
+    position: absolute;
+    float: right;
+}
+/*הגדרות של פירורי לחם*/
+#crumbles{
+    margin-top: 120px;
+    margin-bottom: -155px;
+}
+#crumbles ol li{
+    display:inline-block;
+
+}
+
+#crumbles ol li:after{
+    content: " > ";
+}
+
+#crumbles ol li:last-child:after{
+    content:"";
+}
+/*הגדרות כלליות של איזור ניווט*/
+header {
+    color: white;
+    display: inline-block;
+    width: 100%;
+    margin: 2em 0px 11em 0px;
+}
+header nav ul li {
+    display: inline-block;
+    font-family: 'Fredoka', sans-serif;
+    list-style: none;
+    padding: 15px;
+}
+
+
+#navbar {
+    float: left;
+    margin-left: 30px;
+    width: 720px;
+    position: relative;
+}
+
+/*הגדרות כלליות של איזור הפוטר*/
+.footer {
+    color: white;
+    justify-content:center;
+    
+}
+
+footer nav ul li {
+    display: inline-block;
+    font-family: 'Fredoka', sans-serif;
+    list-style: none;
+    padding: 15px;
+}
+
+footer #navFooter ul {
+    left: 41.5%;
+    position: absolute;
+    
+}
+
+navFooter {
+    top: 50%;
+    left: 50%;
+    transform: translateY(50%);
+}
+
+
+/*הגדרות של לינקים באתר לפי קלאס וסלקטורים*/
+
+a.links:link,
+a.links:visited {
+    color: white;
+    text-decoration: none;
+}
+p.linksEng, a.linksEng{
+    color:white;
+    text-decoration:none;
+}
+
+a.linksMapSite {
+    color: black;
+    text-decoration: none;
+}
+
+p.linksEng, .disabled a.links {
+    cursor: not-allowed;
+}
+
+a.links:link:hover,
+a.links:visited:hover, a.links:active,
+a.links:visited:active,
+.active {
+    color: #ffc045;
+}
+
+p.linksEng:hover, a.linksEng:hover {
+    box-shadow: rgba(255,255,255, 0.2);
+    text-decoration: none;
+}
+/*הגדרות של כותרות בעמודי תוכן ובעמוד הבית*/
+#firstTitleHome, #siteMapTitle, #contactUsTitle, #recipeBookIntro, #aboutUsTitle {
+    color: white;
+    font-size: 80px;
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#secondTitleHome, #siteMapSecondTitle {
+    color: white;
+    font-size: 60px;
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    position:relative;
+    margin-bottom:0;
+}
+
+#siteMapSecondTitle {
+    padding: 0px 0px 20px 0px;
+}
+
+
+/*הגדרות של כפתורים שאינם פעילים*/
+.disabled {
+color: gray;
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+}
+
+.disabled.a.links {
+    text-decoration: none;
+}
+
+.disabled.a.links:hover {
+    cursor: not-allowed;
+}
+/*הגדרות של תמונת מפית - גלילה לתוכן*/
+#napkin {
+    position:relative;
+    top:35px;
+    z-index: 0;
+    margin-right: 42%;
+}
+/*הגדרות של גלילת שעון בעמוד FoodByContinent*/
+#napkinWatch {
+    position: relative;
+    top: 35px;
+    z-index: 1;
+    margin-right: 42%;
+    margin-top:90px;
+}
+    
+/*הגדרות ראשיות של קטעי תוכן*/
+.main-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    z-index: 3;
+    text-align: center;
+    margin-top:30px;
+}
+/*הגדרות של חלק ימני בעמודים פנימיים חצויים*/
+.main-container .rightSide {
+    flex: 1;
+    width: 50%;
+    background-color: white;
+}
+
+/*הגדרות של חלק שמאלי בעמודים פנימיים חצויים*/
+.main-container .leftSide {
+    flex: none;
+    width: 50%;
+    background-color: #F2B035;
+    padding: 40px;
+}
+/*הגדרות של קטעי טקסט בצד ימין של התוכן בעמודים חצויים*/
+.rightSide > h2{
+    position:relative;
+    top:35px;
+}
+
+.rightSide > p{
+    position:relative;
+    padding: 50px;
+    margin-top:90px;
+    margin-bottom:80px;
+}
+/*ציטוט בעמוד בית*/
+#frenchQuote {
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #F25430;
+    border-radius: 5px;
+}
+/*הגדרות של כפתורים באופן כללי*/
+.button {
+    position: relative;
+    margin-top: 30px;
+}
+/*הגדרות של של האבא של הכפתורים - דיב*/
+#engagmentButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+/*הגדרות של הכפתור עצמו*/
+.engButtons {
+    width: 180px;
+    height: 80px;
+    background-color: #F2B035;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgb(140,82,48);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    transition: height linear 0.2s, width linear 0.2s;
+}
+/*ריחוף מעל כפתור*/
+.engButtons:hover {
+    background-color: #f2b034;
+    height: 90px;
+    width:190px;
+}
+
+/*הגדרות של דיב קרוסלה - אבא של כל השאר*/
+#carousel {
+    transition: 2s;
+    width: 360px;
+    height: 360px;
+    position: relative;
+    top: 20px;
+    margin-bottom: 20%;
+}
+
+/* דיב של המצגת */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/*הגדרות חצי מעבר בין התמונות */
+.Back,
+.forward {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: 30%;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+/* הגדרות כפתור מעבר אחורה */
+
+.Back {
+    left: 100%;
+    color: white;
+}
+
+/* הגדרות כפתור מעבר קדימה */
+.forward {
+    right: 100%;
+    border-radius: 4px 0 0 4px;
+    color: white;
+}
+
+    /* שקיפות חצים */
+    .Back:hover,
+    .forward:hover {
+        background-color: #f2b035;
+    }
+
+/* הגדרות של המידע על התמונות (כתוב) */
+.Info {
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 10px 14px;
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: Fredoka;
+}
+
+/* מספור תמונות */
+.MessageInfo {
+    color: black;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: relative;
+    top: 0;
+}
+
+/*הגדרוץת של הדיב של התמונות הקטנות*/
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+/*הגדרות של התמונות הקטנות*/
+.thumbnail {
+    height: 100px;
+    width: 100px;
+    margin: 0 5px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+/*ריחוף מעל תמונות קטנות*/
+.thumbnail:hover {
+    opacity: 1;
+    border: dashed 2px black;
+}
+
+/*הגדרות של המידע על האוכל שנמצא בדף אוכל לפי יבשות*/
+.continent-food-info{
+    display:flex;
+    flex-direction:column;
+    padding:5px;
+    height: 180px;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.2);
+    border-radius:15px;
+
+}
+
+/*הגדרות של תוכן מפת אתר*/
+#mapSiteContent {
+    background-color: white;
+    height: 80vh;
+    display: flex;
+    font-family: Fredoka;
+    margin-top: 30px;
+    border: solid #F2B035 5px;
+}
+
+#mapSiteContent > siteMapSecondTitle {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+/*הגדרות של עמוד ספר מתכונים*/
+/*הגדרות של הספר עצמו - מידות וגודל*/
+iframe {
+    border: 0px;
+    width: 450px;
+    height: 490px;
+    margin-top: 5%;
+ }
+
+/*הגדרות אבא(דיב) של ספר מתכונים*/
+#sefer-matkonim-second-section{
+    justify-content:center;
+    align-content:center;
+}
+
+/*הגדרות של הלבן*/
+#sefer-matkonim-white-square {
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    justify-content:center;
+    margin: 0 calc(100% - 90%);
+    
+}
+
+/*הגדרות גובה של עמוד ספר מתכונים*/
+#sefer-matkonim-second-section {
+    height: 100vh !important;
+}
+
+/*'הגדרות של התוכן בעמוד 'ספר מתכונים*/
+#flipbook {
+    background-color: #F2B035;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+/*הגדרות של לינק ההורדה*/
+#downloadLinkBook {
+    
+    padding: 0px;
+    text-align: center;
+        color: black;
+    text-decoration: underline;
+}
+/*הגדרות של כפתור גלילה*/
+.scroll-up-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #F2B035;
+    color: #fff;
+    border: black 0.5px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.scroll-up-button.show {
+    display: block;
+}
+
+.scroll-up-button:hover {
+    background-color: #ffc045;
+}
+
+/*הגדרות של עמודי צרו קשר ואודות*/
+#secondSection-about, #second-form, #textArea, #sefer-matkonim-second-section, #siteMap {
+    display: flex;
+    flex-direction: column !important;
+    background-size: 100%;
+    background-color: white;
+    border: 20px #F2B035 solid;
+    font-family: Fredoka;
+    color: black;
+    margin: 50px 240px;
+    padding: 0px 10px;
+    height: 120vh;
+    border-radius: 30px;
+}
+
+#second-form{
+    height:90vh;
+}
+/*הגדרות של תוכן - עמוד אודות*/
+#secondSection-about > div > section {
+    position: relative;
+    margin-right: 13%;
+    width: 700px;
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+}
+
+
+
+#secondSection-about {
+    display: flex;
+    justify-content: space-between;
+    height: 120vh !important;
+}
+
+#secondSection-about > h3 {
+    width: 200px !important;
+    margin: 10px 0;
+}
+
+#formAndPicture ul li, #siteMapNav ol li {
+    position: relative;
+    display: inline-block;
+    content: "|";
+    margin: 0px 5px;
+    color: white;
+}
+
+/*הגדרות טופס - עמוד צרו קשר בלבד*/
+    /*הגדרות של טקסטים בעמוד צרו קשר*/
+    .texts-in-second-form {
+    display: flex;
+    justify-content: space-between;
+}
+/*הגדרות של צרו קשר - כותרת בכניסה*/
+#secondSection-contact > #title {
+    background-color: white;
+    color: #F25430;
+    padding: 20px;
+    margin-top: 70px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+}
+
+.texts-in-second-form > h3 {
+    margin: 10px 185px;
+}
+
+/*הגדרות של הטופס עצמו*/
+form {
+    width: 60%;
+    margin-right: 20%;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+}
+/*הגדרות של כל הדיב של הטופס*/
+#form {
+    margin-top: 5%;
+    padding: 0 40px;
+    background-color: rgba(242,176,53, 0.1);
+    border-radius:30px;
+}
+/*הגדרות של כל מה שנמצא בלייבל*/
+.form-label {
+    display: flex;
+    flex-direction: column;
+}
+/*הגדרות של כל האינפוטים בטופס */
+.form-input {
+    margin-top: 5px;
+}
+/*הגדרות של הכוכבית של האזור הנדרש*/
+#form .required-field {
+    color: red;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+/*הגדרות של האבא של האינפוטים בתוך כל לייבל בדיב של הטופס*/
+#form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: black;
+    position: relative;
+}
+/*הגדרות אורך רוחב של תיובת הטקסט*/
+#form input[type="text"],#form input[type="email"], #form input[type="tel"],
+#form textarea {
+    width: 400px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/*הגדרות של אזור טקסט בלבד*/
+#form textarea {
+    height: 100px;
+    color: black;
+    font-family: Fredoka;
+    margin-right: calc(50% - 200px);
+    margin-bottom: 15px;
+}
+
+/*הגדרות של כפתור שליחה*/
+#form input[type="submit"] {
+    width: 60px;
+    margin: 0 50%;
+    transform: translateX(50%);
+    padding: 10px;
+    font-size: 18px;
+    background-color: #F25430;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*הגדרות של כותרת בטופס*/
+.form-input-text {
+    margin-left: 320px;
+}
+
+/*מפת אתר - עיצוב רשימה*/
+#navbarSiteMap {
+    height: 120px;
+    width: 100%;
+    text-align: center;
+    color: rgba(0,0,0, 0.2);
+}
+#navbarSiteMap ol li {
+    display:inline-block;
+}
+
+
+/*הגדרות של התוכן במפת האתר*/
+#siteMap {
+    height: 90px!important;
+    margin-bottom:120px;
+}
+
+
+
+
+
